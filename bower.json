@@ -1,0 +1,10 @@
+{
+  "name": "floatgame",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "appPath": "app"
+}
