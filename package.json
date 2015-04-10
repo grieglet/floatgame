@@ -1,14 +1,17 @@
 {
-	"name": "floatgame",
-	"version": "0.0.0",
-	"private": true,
-	"dependencies": {},
-	"devDependencies": {
-	},
-	"engines": {
-		"node": ">=0.12.0"
-	},
-	"scripts": {
-		"test": "grunt test"
-	}
+  "name": "floatgame",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
 }
