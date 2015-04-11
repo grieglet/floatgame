@@ -41,16 +41,15 @@
                     var companies = data['companies'];
                     console.log(companies);
 
-                    for (var index in companies) {
-                        var companyData = companies[index];
+                    for (var name in companies) {
+                        var companyData = companies[name];
 
-                        var company = fbutils.fbObject('companies', companyData['companyname']);
+                        var company = fbutils.fbObject('companies', name);
 
                         for (var key in companyData) {
                             company[key] = companyData[key];
                         }
-
-                        company.companyname = companyData['companyname'];
+                        
                         company.$save();
                     }
                 });

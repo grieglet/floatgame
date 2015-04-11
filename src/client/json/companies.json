@@ -1,3 +1,130 @@
 {
-    
+    "companies": {
+        "Howards coffe shop" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Adams pleasure house" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Wellingtons pumkin pies" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "London slave-market" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Scotts drunkhouse" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Picadilly tavern" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Pieres sockshop" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Rentahorse" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Rentawreck" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Nails and cuffs" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "London clownservice" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Wooden sprocks trading company" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "Spicy spices" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        },
+        "London traveling circus" : {
+            "price": {
+                "current": 5000
+            },
+            "shares": {
+                "available": 500,
+                "total": 2500
+            }
+        }
+    }
 }
