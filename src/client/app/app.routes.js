@@ -11,6 +11,7 @@
     function routeChangeFailureHandler($rootScope, $location) {
         $rootScope.$on("$routeChangeError", function (event, next, previous, error) {
             if (error === "AUTH_REQUIRED") {
+                console.log('AUTH_REQUIRED');
                 $location.path("/login");
             }
         });
@@ -20,33 +21,18 @@
 
     function routes($routeProvider) {
         $routeProvider
-            .when('/', {
-                templateUrl: 'front/front.html',
-                controller: 'FrontController',
-                controllerAs: 'front',
-                resolve: {
-                    "currentAuth": ["Auth", function (Auth) {
-                        return Auth.$waitForAuth();
-                    }]
-                }
-            })
             .when('/dashboard', {
                 templateUrl: 'dashboard/dashboard.html',
                 controller: 'DashboardController',
-                controllerAs: 'dashboard',
-                resolve: {
-                    "currentAuth": ["Auth", function (Auth) {
-                        return Auth.$waitForAuth();
-                    }]
-                }
+                controllerAs: 'dashboard'
             })
             .when('/login', {
-                templateUrl: 'login/login.html',
+                templateUrl: 'app/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'login'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/login'
             });
     }
 })();

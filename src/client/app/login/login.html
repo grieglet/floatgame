@@ -1,0 +1,20 @@
+<div ng-if="login.authData">
+    <h3>login info</h3>
+    <code>{{::login.authData | json}}</code>
+</div>
+<div ng-if="login.authError">
+    <h3>erro info</h3>
+    <code>{{::login.authError | json}}</code>
+</div>
+
+<h3>login</h3>
+
+
+
+<form class="form-inline">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="name" ng-model="login.username">
+    </div>
+    <button class="btn btn-default" type="submit" ng-click="login.auth()">Login</button>
+</form>

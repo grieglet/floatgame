@@ -3,9 +3,9 @@
 
     angular
         .module('dashboard')
-        .controller('DashboardController', Dashboard);
+        .controller('DashboardController', DashboardController);
 
-    function Dashboard() {
+    function DashboardController() {
 
     }
 })();

@@ -27,12 +27,7 @@
     <!-- endbuild -->
 </head>
 <body>
-    <div class="container">
-        <div class="header"><statusbar></statusbar></div>
-        <div class="content">
-            Content
-        </div>
-    </div>
+    <ng-view></ng-view>
 
     <!-- build:js js/lib.js -->
     <!-- bower:js -->
@@ -53,13 +48,16 @@
     <!-- build:js js/app.js-->
     <!-- inject:js -->
     <script src="/src/client/app/app.module.js"></script>
-    <script src="/src/client/app/authenticate/authenticate.module.js"></script>
     <script src="/src/client/app/dashboard/dashboard.module.js"></script>
+    <script src="/src/client/app/firebaseutils/firebaseutils.module.js"></script>
+    <script src="/src/client/app/login/login.module.js"></script>
+    <script src="/src/client/app/states/states.module.js"></script>
     <script src="/src/client/app/statusbar/statusbar.module.js"></script>
     <script src="/src/client/app/app.constants.js"></script>
     <script src="/src/client/app/app.routes.js"></script>
-    <script src="/src/client/app/authenticate/isAuthenticated.service.js"></script>
     <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
+    <script src="/src/client/app/firebaseutils/firebaseutils.service.js"></script>
+    <script src="/src/client/app/login/login.controller.js"></script>
     <script src="/src/client/app/statusbar/statusbar.directive.js"></script>
     <!-- endinject -->
 
