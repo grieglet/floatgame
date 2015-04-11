@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('dashboard', [
-        'states'
+        'states',
+        'stocks'
     ]);
 })();

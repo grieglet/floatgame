@@ -33,7 +33,7 @@
                 username = 'developer';
             }
 
-            var player = fbutils.player(uid);
+            var player = fbutils.fbObject('players');
 
             for (var key in PLAYER_START_VALUES) {
                 if (PLAYER_START_VALUES.hasOwnProperty(key)) {

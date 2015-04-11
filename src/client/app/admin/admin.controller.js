@@ -44,12 +44,12 @@
                     for (var name in companies) {
                         var companyData = companies[name];
 
-                        var company = fbutils.fbObject('companies', name);
+                        var company = fbutils.fbObject('companies/' + name);
 
                         for (var key in companyData) {
                             company[key] = companyData[key];
                         }
-                        
+
                         company.$save();
                     }
                 });

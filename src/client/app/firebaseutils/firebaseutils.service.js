@@ -25,20 +25,20 @@
             return $firebaseAuth(ref);
         }
 
-        function fbObject(path, id) {
+        function fbObject(path) {
             var ref = new Firebase(FIREBASE_URL);
-            var objRev = ref.child(path + '/' + id);
+            var objRev = ref.child(path);
             return $firebaseObject(objRev);
         }
 
-        function fbArray(path, id) {
+        function fbArray(path) {
             var ref = new Firebase(FIREBASE_URL);
-            var objRev = ref.child(path + '/' + id);
+            var objRev = ref.child(path);
             return $firebaseArray(objRev);
         }
 
         function player(uid) {
-            return fbObject('players', uid);
+            return fbObject('players/' + uid);
         }
 
         function authenticate() {

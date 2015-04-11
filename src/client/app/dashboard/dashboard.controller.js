@@ -5,15 +5,16 @@
         .module('dashboard')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['playerService'];
+    DashboardController.$inject = ['$scope', 'playerService', 'companyService'];
 
-    function DashboardController(playerService) {
+    function DashboardController($scope, playerService, companyService) {
         var vm = this;
 
         activate();
 
         function activate() {
-            vm.player = playerService.getPlayer();
+            playerService.getPlayer().$bindTo($scope, "player");
+            companyService.getCompanies().$bindTo($scope, "companies");
         }
     }
 })();
