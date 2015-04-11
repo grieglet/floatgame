@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Buy</th>
+            <th>Sell</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(name, company) in stocklist.companies">
+            <th>{{name}}</th>
+            <th>{{company.price.current}}</th>
+            <th>{{company.shares.available}}</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </tbody>
+</table>

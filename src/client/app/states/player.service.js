@@ -17,7 +17,7 @@
         return services;
 
         function getPlayer(username, uid) {
-            if (player == undefined) {
+            if (player === undefined) {
                 player = createPlayer(username, uid);
             }
 
@@ -33,7 +33,7 @@
                 username = 'developer';
             }
 
-            var player = fbutils.fbObject('players');
+            var player = fbutils.player(uid);
 
             for (var key in PLAYER_START_VALUES) {
                 if (PLAYER_START_VALUES.hasOwnProperty(key)) {

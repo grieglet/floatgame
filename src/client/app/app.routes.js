@@ -9,10 +9,10 @@
     routeChangeFailureHandler.$inject = ['$rootScope', '$location'];
 
     function routeChangeFailureHandler($rootScope, $location) {
-        $rootScope.$on("$routeChangeError", function (event, next, previous, error) {
-            if (error === "AUTH_REQUIRED") {
+        $rootScope.$on('$routeChangeError', function (event, next, previous, error) {
+            if (error === 'AUTH_REQUIRED') {
                 console.log('AUTH_REQUIRED');
-                $location.path("/login");
+                $location.path('/login');
             }
         });
     }

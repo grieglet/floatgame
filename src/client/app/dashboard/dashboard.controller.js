@@ -13,8 +13,8 @@
         activate();
 
         function activate() {
-            playerService.getPlayer().$bindTo($scope, "player");
-            companyService.getCompanies().$bindTo($scope, "companies");
+            playerService.getPlayer().$bindTo($scope, 'player');
+            companyService.getCompanies().$bindTo($scope, 'companies');
         }
     }
 })();

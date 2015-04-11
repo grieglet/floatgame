@@ -16,46 +16,50 @@
             populateCompanies();
 
             function populateNPCS() {
-                $http.get('/json/npcs.json').success(function(data) {
+                $http.get('/json/npcs.json').success(function (data) {
                     var players = data['players'];
                     console.log(players);
 
                     for (var index in players) {
-                        var playerData = players[index];
+                        if (players.hasOwnProperty(index)) {
+                            var playerData = players[index];
 
-                        var player = fbutils.player(playerData['username']);
+                            var player = fbutils.player(playerData['username']);
 
-                        for (var key in playerData) {
-                            player[key] = playerData[key];
+                            for (var key in playerData) {
+                                if (playerData.hasOwnProperty(key)) {
+                                    player[key] = playerData[key];
+                                }
+                            }
+
+                            player.username = playerData['username'];
+                            player.ai = true;
+                            player.$save();
                         }
-
-                        player.username = playerData['username'];
-                        player.ai = true;
-                        player.$save();
                     }
                 });
             }
 
             function populateCompanies() {
-                $http.get('/json/companies.json').success(function(data) {
+                $http.get('/json/companies.json').success(function (data) {
                     var companies = data['companies'];
                     console.log(companies);
 
                     for (var name in companies) {
-                        var companyData = companies[name];
+                        if (companies.hasOwnProperty(name)) {
+                            var companyData = companies[name];
+                            var company = fbutils.fbObject('companies/' + name);
 
-                        var company = fbutils.fbObject('companies/' + name);
+                            for (var key in companyData) {
+                                if (companyData.hasOwnProperty(key)) {
+                                    company[key] = companyData[key];
+                                }
+                            }
 
-                        for (var key in companyData) {
-                            company[key] = companyData[key];
+                            company.$save();
                         }
-
-                        company.$save();
                     }
                 });
             }
-        }
-
-
-    }
+        }}
 })();

@@ -8,14 +8,14 @@
     fbutils.$inject = ['FIREBASE_URL', '$firebaseAuth', '$firebaseObject', '$firebaseArray'];
 
     function fbutils(FIREBASE_URL, $firebaseAuth, $firebaseObject, $firebaseArray) {
-        var uid = undefined;
+        var self = this; // jshint ignore:line
 
         var utils = {
             auth: authenticate,
             fbArray: fbArray,
             fbObject: fbObject,
             player: player,
-            uid: uid
+            uid: self.uid
         };
 
         return utils;

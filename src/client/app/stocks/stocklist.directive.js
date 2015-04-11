@@ -8,7 +8,7 @@
     function stockList() {
         var directive = {
             restrict: 'EA',
-            templateUrl: 'app/statusbar/statusbar.template.html',
+            templateUrl: 'app/stocks/stocklist.template.html',
             scope: {
                 companies: '='
             },

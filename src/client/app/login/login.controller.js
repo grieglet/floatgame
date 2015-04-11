@@ -10,10 +10,6 @@
     function LoginController($location, fbutils, playerService) {
         var vm = this;
 
-        vm.authData = undefined;
-        vm.authError = undefined;
-        vm.playerRef = undefined;
-
         this.auth = auth;
 
         function auth() {
@@ -24,6 +20,7 @@
                 playerService.getPlayer(vm.username, authData.uid);
                 $location.url('/dashboard');
             }).catch(function(error) {
+                console.log(error);
                 vm.authData = undefined;
                 vm.authError = error;
             });
