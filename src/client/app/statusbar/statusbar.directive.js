@@ -8,7 +8,7 @@
     function statusBar() {
         var directive = {
             restrict: 'EA',
-            templateUrl: 'app/statusbar/statusbar.directive.html',
+            templateUrl: 'app/statusbar/statusbar.template.html',
             scope: {
                 max: '='
             },
