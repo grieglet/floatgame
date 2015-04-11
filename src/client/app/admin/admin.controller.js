@@ -13,6 +13,7 @@
 
         function populate() {
             populateNPCS();
+            populateCompanies();
 
             function populateNPCS() {
                 $http.get('/json/npcs.json').success(function(data) {
@@ -31,6 +32,26 @@
                         player.username = playerData['username'];
                         player.ai = true;
                         player.$save();
+                    }
+                });
+            }
+
+            function populateCompanies() {
+                $http.get('/json/companies.json').success(function(data) {
+                    var companies = data['companies'];
+                    console.log(companies);
+
+                    for (var index in companies) {
+                        var companyData = companies[index];
+
+                        var company = fbutils.fbObject('companies', companyData['companyname']);
+
+                        for (var key in companyData) {
+                            company[key] = companyData[key];
+                        }
+
+                        company.companyname = companyData['companyname'];
+                        company.$save();
                     }
                 });
             }

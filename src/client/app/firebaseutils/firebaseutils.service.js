@@ -5,13 +5,15 @@
         .module('firebaseutils')
         .service('fbutils', fbutils);
 
-    fbutils.$inject = ['FIREBASE_URL', '$q', '$firebaseAuth', '$firebaseObject'];
+    fbutils.$inject = ['FIREBASE_URL', '$firebaseAuth', '$firebaseObject', '$firebaseArray'];
 
-    function fbutils(FIREBASE_URL, $q, $firebaseAuth, $firebaseObject) {
+    function fbutils(FIREBASE_URL, $firebaseAuth, $firebaseObject, $firebaseArray) {
         var uid = undefined;
 
         var utils = {
             auth: authenticate,
+            fbArray: fbArray,
+            fbObject: fbObject,
             player: player,
             uid: uid
         };
@@ -23,10 +25,20 @@
             return $firebaseAuth(ref);
         }
 
-        function player(uid) {
+        function fbObject(path, id) {
             var ref = new Firebase(FIREBASE_URL);
-            var playerRef = ref.child('players/' + uid);
-            return $firebaseObject(playerRef);
+            var objRev = ref.child(path + '/' + id);
+            return $firebaseObject(objRev);
+        }
+
+        function fbArray(path, id) {
+            var ref = new Firebase(FIREBASE_URL);
+            var objRev = ref.child(path + '/' + id);
+            return $firebaseArray(objRev);
+        }
+
+        function player(uid) {
+            return fbObject('players', uid);
         }
 
         function authenticate() {
