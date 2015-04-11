@@ -1,0 +1,20 @@
+{
+    "players": [
+        {
+            "username": "wimpfred",
+            "credits": 51000
+        },
+        {
+            "username": "grant",
+            "credits": 46000
+        },
+        {
+            "username": "ashley",
+            "credits": 36000
+        },
+        {
+            "username": "slought",
+            "credits": 42000
+        }
+    ]
+}

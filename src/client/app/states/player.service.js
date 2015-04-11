@@ -44,6 +44,7 @@
             }
 
             player.username = username;
+            player.ai = false;
             player.$save();
 
             return player;
