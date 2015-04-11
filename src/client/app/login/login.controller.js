@@ -5,9 +5,9 @@
         .module('login')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['fbutils'];
+    LoginController.$inject = ['$location', 'fbutils', 'playerService'];
 
-    function LoginController(fbutils) {
+    function LoginController($location, fbutils, playerService) {
         var vm = this;
 
         vm.authData = undefined;
@@ -20,6 +20,9 @@
             fbutils.auth(vm.username).then(function(authData) {
                 vm.authData = authData;
                 vm.authError = undefined;
+
+                playerService.getPlayer(vm.username, authData.uid);
+                $location.url('/dashboard');
             }).catch(function(error) {
                 vm.authData = undefined;
                 vm.authError = error;

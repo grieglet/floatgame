@@ -5,7 +5,15 @@
         .module('dashboard')
         .controller('DashboardController', DashboardController);
 
-    function DashboardController() {
+    DashboardController.$inject = ['playerService'];
 
+    function DashboardController(playerService) {
+        var vm = this;
+
+        activate();
+
+        function activate() {
+            vm.player = playerService.getPlayer();
+        }
     }
 })();

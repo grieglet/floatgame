@@ -1,5 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('states', []);
+    angular.module('states', [
+        'firebaseutils'
+    ]);
 })();

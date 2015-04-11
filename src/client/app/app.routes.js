@@ -22,14 +22,19 @@
     function routes($routeProvider) {
         $routeProvider
             .when('/dashboard', {
-                templateUrl: 'dashboard/dashboard.html',
+                templateUrl: 'app/dashboard/dashboard.html',
                 controller: 'DashboardController',
-                controllerAs: 'dashboard'
+                controllerAs: 'game'
             })
             .when('/login', {
                 templateUrl: 'app/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'login'
+            })
+            .when('/admin', {
+                templateUrl: 'app/admin/admin.html',
+                controller: 'AdminController',
+                controllerAs: 'admin'
             })
             .otherwise({
                 redirectTo: '/login'

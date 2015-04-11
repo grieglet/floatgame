@@ -5,6 +5,7 @@
         'ngRoute',
         'firebase',
         'firebaseutils',
+        'admin',
         'states',
         'login',
         'statusbar',

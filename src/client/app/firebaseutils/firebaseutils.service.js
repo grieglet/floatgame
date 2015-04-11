@@ -29,27 +29,9 @@
             return $firebaseObject(playerRef);
         }
 
-        function authenticate(username) {
-            var deferred = $q.defer();
-
-            if (username == undefined) {
-                deferred.reject('player needs a name');
-            } else {
-                var auth = firebaseAuth();
-
-                auth.$authAnonymously().then(function(authData) {
-                    uid = authData.uid;
-                    var player = utils.player(uid);
-                    player.username = username;
-                    player.$save();
-
-                    deferred.resolve(authData);
-                }).catch(function(error) {
-                    deferred.reject(error);
-                });
-            }
-
-            return deferred.promise;
+        function authenticate() {
+            var auth = firebaseAuth();
+            return auth.$authAnonymously();
         }
     }
 })();
