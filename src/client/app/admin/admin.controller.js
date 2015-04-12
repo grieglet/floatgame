@@ -4,13 +4,17 @@
     angular.module('admin')
         .controller('AdminController', AdminController);
 
-    AdminController.$inject = ['$http', 'fbutils'];
+    AdminController.$inject = ['$scope', '$http', '$interval', 'TICKDELAY', 'fbutils'];
 
-    function AdminController($http, fbutils) {
+    function AdminController($scope, $http, $interval, TICKDELAY, fbutils) {
         var vm = this;
+
+        $scope.time = { $value: 0 };
+        $scope.tick = { $value: 0 };
 
         vm.populate = populate;
         vm.clear = clear;
+        vm.startTicks = startTicks;
 
         function populate() {
             populateNPCS();
@@ -70,7 +74,49 @@
             var ref = fbutils.fbObject('/');
             ref.$remove();
 
+            var time = fbutils.fbObject('time');
+            var tick = fbutils.fbObject('tick');
+            time.$value = 0;
+            tick.$value = 0;
+            time.$save();
+            tick.$save();
+
             console.log('CLEARED ALL RECORDS!');
+        }
+
+        function startTicks() {
+            var tickRef = fbutils.fbObject('tick');
+            var timeRef = fbutils.fbObject('time');
+
+            tickRef.$bindTo($scope, 'tick').then(function() {
+                timeRef.$bindTo($scope, 'time').then(function() {
+                    var cancelTimer = $interval(updateTime, 1000);
+
+                    $scope.$on('$destroy', function() {
+                        cancelTimer();
+                    });
+                });
+            });
+        }
+
+        function updateTime() {
+            $scope.time.$value += 1;
+
+            if ($scope.time.$value > TICKDELAY) {
+                updateTicks();
+            }
+        }
+
+        function updateTicks() {
+            $scope.time.$value = 0;
+            $scope.tick.$value += 1;
+            console.log('tick: ' + $scope.tick.$value);
+
+            updateStocks();
+        }
+
+        function updateStocks() {
+
         }
     }
 })();

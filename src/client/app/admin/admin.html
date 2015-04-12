@@ -1,4 +1,12 @@
 <div class="container">
     <button class="btn btn-default btn-danger" type="submit" ng-click="admin.clear()">Clear</button>
     <button class="btn btn-default" type="submit" ng-click="admin.populate()">Populate</button>
+    <button class="btn btn-default btn-success" type="submit" ng-click="admin.startTicks()">startTicks</button>
+
+    time: {{time.$value}}
+    tick: {{tick.$value}}
+
+    <div class="row">
+        <timer time="time.$value"></timer>
+    </div>
 </div>
