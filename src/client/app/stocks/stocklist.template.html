@@ -12,9 +12,9 @@
         <tr ng-repeat="(name, company) in stocklist.companies">
             <th>{{name}}</th>
             <th>{{company.price.current}}</th>
-            <th>{{company.shares.available}}</th>
-            <th></th>
-            <th></th>
+            <th>{{company.stocks.available}}</th>
+            <th><span class="glyphicon glyphicon-plus text-success pointer" ng-click="stocklist.buy(name)"></span></th>
+            <th><span class="glyphicon glyphicon-minus text-danger pointer" ng-click="stocklist.sell(name)"></span></th>
         </tr>
     </tbody>
 </table>

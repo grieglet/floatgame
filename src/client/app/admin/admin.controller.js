@@ -10,6 +10,7 @@
         var vm = this;
 
         vm.populate = populate;
+        vm.clear = clear;
 
         function populate() {
             populateNPCS();
@@ -18,7 +19,6 @@
             function populateNPCS() {
                 $http.get('/json/npcs.json').success(function (data) {
                     var players = data['players'];
-                    console.log(players);
 
                     for (var index in players) {
                         if (players.hasOwnProperty(index)) {
@@ -37,6 +37,8 @@
                             player.$save();
                         }
                     }
+
+                    console.log('populated npcs');
                 });
             }
 
@@ -59,7 +61,16 @@
                             company.$save();
                         }
                     }
+
+                    console.log('populated companies');
                 });
-            }
-        }}
+            }}
+
+        function clear() {
+            var ref = fbutils.fbObject('/');
+            ref.$remove();
+
+            console.log('CLEARED ALL RECORDS!');
+        }
+    }
 })();

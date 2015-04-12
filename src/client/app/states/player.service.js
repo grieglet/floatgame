@@ -8,7 +8,7 @@
     playerService.$inject = ['PLAYER_START_VALUES', 'fbutils'];
 
     function playerService(PLAYER_START_VALUES, fbutils) {
-        var player;
+        //var player;
 
         var services = {
             getPlayer: getPlayer
@@ -17,9 +17,9 @@
         return services;
 
         function getPlayer(username, uid) {
-            if (player === undefined) {
-                player = createPlayer(username, uid);
-            }
+            //if (player === undefined) {
+                var player = createPlayer(username, uid);
+            //}
 
             return player;
         }
@@ -44,8 +44,8 @@
             }
 
             player.username = username;
-            player.ai = false;
             player.$save();
+
 
             return player;
         }
