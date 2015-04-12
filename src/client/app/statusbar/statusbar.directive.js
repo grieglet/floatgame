@@ -10,7 +10,8 @@
             restrict: 'EA',
             templateUrl: 'app/statusbar/statusbar.template.html',
             scope: {
-                player: '='
+                player: '=',
+                tick: '='
             },
             link: linkFunc,
             controller: Controller,

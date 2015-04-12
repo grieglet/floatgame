@@ -2,128 +2,142 @@
     "companies": {
         "Howards coffe shop" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Adams pleasure house" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Wellingtons pumkin pies" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "London slave-market" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Scotts drunkhouse" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Picadilly tavern" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Pieres sockshop" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Rentahorse" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Rentawreck" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Nails and cuffs" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "London clownservice" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Wooden sprocks trading company" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "Spicy spices" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         },
         "London traveling circus" : {
             "price": {
-                "current": 5000
+                "current": 5000,
+                "initial": 5000
             },
             "stocks": {
                 "available": 500,
-                "total": 2500
+                "total": 500
             }
         }
     }

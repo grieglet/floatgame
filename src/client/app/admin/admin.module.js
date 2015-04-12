@@ -2,6 +2,8 @@
     'use strict';
 
     angular.module('admin', [
-        'firebaseutils'
+        'firebaseutils',
+        'timer',
+        'states'
     ]);
 })();

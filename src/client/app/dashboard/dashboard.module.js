@@ -2,7 +2,9 @@
     'use strict';
 
     angular.module('dashboard', [
+        'firebaseutils',
         'states',
-        'stocks'
+        'stocks',
+        'timer'
     ]);
 })();

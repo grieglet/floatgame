@@ -9,7 +9,6 @@
         'states',
         'login',
         'statusbar',
-        'timer',
         'dashboard'
     ]);
 })();

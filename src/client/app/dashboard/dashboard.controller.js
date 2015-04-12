@@ -5,9 +5,9 @@
         .module('dashboard')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['$scope', 'playerService', 'companyService'];
+    DashboardController.$inject = ['$scope', 'fbutils', 'playerService', 'companyService'];
 
-    function DashboardController($scope, playerService, companyService) {
+    function DashboardController($scope, fbutils, playerService, companyService) {
         var vm = this;
 
         activate();
@@ -17,6 +17,12 @@
                 companyService.getCompanies().$bindTo($scope, 'companies').then(function() {
                     watchPlayerCompanies()
                 });
+            });
+
+            var tickRef = fbutils.fbObject('tick');
+            vm.tick = tickRef;
+            tickRef.$watch(function() {
+                vm.tick = tickRef;
             });
         }
 

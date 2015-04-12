@@ -10,7 +10,6 @@
             restrict: 'EA',
             templateUrl: 'app/timer/timer.template.html',
             scope: {
-                time: '='
             },
             link: linkFunc,
             controller: Controller,
