@@ -10,6 +10,7 @@
             restrict: 'EA',
             templateUrl: 'app/stocks/stocklist.template.html',
             scope: {
+                own: '=',
                 player: '=',
                 companies: '='
             },

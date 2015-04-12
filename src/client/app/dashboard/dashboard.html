@@ -2,23 +2,27 @@
     <div class="header"><statusbar player="player"></statusbar></div>
     <div class="content">
         <div class="row">
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3>My stocks</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="row"><stocklist player="player" companies="playercompanies" own="true"></stocklist></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3>Stocks</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="row"><stocklist player="player" companies="companies"></stocklist></div>
+                        <div class="row">
+                            <stocklist player="player" companies="companies" own="false"></stocklist>
+                        </div>
                     </div>
                 </div>
             </div>

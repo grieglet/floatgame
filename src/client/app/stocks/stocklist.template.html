@@ -1,6 +1,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
+            <th ng-if="stocklist.own">Owned</th>
             <th>Name</th>
             <th>Price</th>
             <th>Available</th>
@@ -10,6 +11,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="(name, company) in stocklist.companies">
+            <th ng-if="stocklist.own">{{stocklist.player.stocks[name]}}</th>
             <th>{{name}}</th>
             <th>{{company.price.current}}</th>
             <th>{{company.stocks.available}}</th>
