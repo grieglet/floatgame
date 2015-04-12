@@ -1,0 +1,25 @@
+<div clas="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <carousel interval="intro.interval">
+                <slide ng-repeat="slide in intro.slides" active="slide.active">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{$index}}</h4>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+    <div class="row">
+        <div style="width: 4em; display: block; margin-left: auto; margin-right: auto">
+            <button class="btn btn-default" type="submit" ng-click="intro.login()">Login</button>
+        </div>
+    </div>
+    <div class="row" ng-hide="{{true}}">
+        <audio controls autoplay>
+            <source src="../images/lysbildeseriemusic.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+

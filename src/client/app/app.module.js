@@ -7,6 +7,7 @@
         'firebaseutils',
         'admin',
         'states',
+        'intro',
         'login',
         'statusbar',
         'dashboard'

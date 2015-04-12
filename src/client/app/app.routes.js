@@ -31,13 +31,18 @@
                 controller: 'LoginController',
                 controllerAs: 'login'
             })
+            .when('/intro', {
+                templateUrl: 'app/intro/intro.html',
+                controller: 'IntroController',
+                controllerAs: 'intro'
+            })
             .when('/admin', {
                 templateUrl: 'app/admin/admin.html',
                 controller: 'AdminController',
                 controllerAs: 'admin'
             })
             .otherwise({
-                redirectTo: '/login'
+                redirectTo: '/intro'
             });
     }
 })();
