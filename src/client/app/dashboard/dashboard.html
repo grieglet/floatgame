@@ -13,6 +13,20 @@
     </div>
     <div class="content">
         <div class="row">
+            <div class="col-md-4" ng-if="false">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Players</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="row">
+                                <player-list players="vm.players"></player-list>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -20,7 +34,9 @@
                     </div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class="row"><stocklist player="player" companies="playercompanies" own="true"></stocklist></div>
+                            <div class="row">
+                                <stocklist player="player" companies="playercompanies" own="true"></stocklist>
+                            </div>
                         </div>
                     </div>
                 </div>

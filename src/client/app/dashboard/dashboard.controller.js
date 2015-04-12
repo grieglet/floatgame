@@ -24,6 +24,10 @@
             tickRef.$watch(function() {
                 vm.tick = tickRef;
             });
+
+            fbutils.fbObject('players').$watch(function(data) {
+                vm.players = data;
+            });
         }
 
         function watchPlayerCompanies() {

@@ -4,9 +4,9 @@
     angular.module('admin')
         .controller('AdminController', AdminController);
 
-    AdminController.$inject = ['$scope', '$http', '$interval', 'TICKDELAY', 'fbutils', 'companyService'];
+    AdminController.$inject = ['$scope', '$http', '$interval', 'TICKDELAY', 'fbutils'];
 
-    function AdminController($scope, $http, $interval, TICKDELAY, fbutils, companyService) {
+    function AdminController($scope, $http, $interval, TICKDELAY, fbutils) {
         var vm = this;
 
         $scope.time = { $value: 0 };
@@ -17,7 +17,7 @@
         vm.startTicks = startTicks;
 
         function populate() {
-            populateNPCS();
+            //populateNPCS();
             populateCompanies();
 
             function populateNPCS() {

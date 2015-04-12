@@ -5,6 +5,7 @@
         'firebaseutils',
         'states',
         'stocks',
-        'timer'
+        'timer',
+        'playerlist'
     ]);
 })();

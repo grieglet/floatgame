@@ -10,6 +10,7 @@
         'intro',
         'login',
         'statusbar',
-        'dashboard'
+        'dashboard',
+        'playerlist'
     ]);
 })();

@@ -26,6 +26,11 @@
 
         function createPlayer(username, uid) {
             if (!uid) {
+                return null;
+            }
+
+
+            if (!uid) {
                 uid = 'dev';
             }
 
